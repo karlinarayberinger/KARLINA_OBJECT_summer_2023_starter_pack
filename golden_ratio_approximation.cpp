@@ -9,10 +9,10 @@
 /* preprocessing directives */
 #include <iostream> // standard input (std::cin), standard output (std::cout)
 #include <fstream> // file input, file output
-#define MAXIMUM_N 45 // constant which represents maximum N value
+#define MAXIMUM_N 92 // constant which represents maximum N value
 
 /* function prototypes */
-unsigned long long int compute_Nth_fibonacci_sequence_term_using_iteration(int N);
+unsigned long long compute_Nth_fibonacci_sequence_term_using_iteration(int N);
 long double golden_ratio_approximation(int N, std::ostream & output);
 
 /**
@@ -27,9 +27,10 @@ long double golden_ratio_approximation(int N, std::ostream & output);
  * fibonacci(1) := 1. // The second term of the Fibonacci Sequence is 1.
  * fibonacci(i) := fibonacci(i - 2) + fibonacci(i - 1). // if i is a natural number larger than 1
  */
-unsigned long long int compute_Nth_fibonacci_sequence_term_using_iteration(int N)
+unsigned long long compute_Nth_fibonacci_sequence_term_using_iteration(int N)
 {
-    int i = 0, A = 1, B = 1, C = 0;
+    int i = 0;
+    unsigned long long A = 1, B = 1, C = 0;
     if ((N < 2) || (N > MAXIMUM_N)) return 1;
     for (i = 1; i < N; i += 1) 
     {
@@ -54,7 +55,7 @@ unsigned long long int compute_Nth_fibonacci_sequence_term_using_iteration(int N
  */
 long double golden_ratio_approximation(int N, std::ostream & output)
 {
-    unsigned long long int A = 0, B = 0; 
+    unsigned long long A = 0, B = 0; 
     long double C = 0.0;
     if ((N < 0) || (N > MAXIMUM_N)) N = 0;
     A = compute_Nth_fibonacci_sequence_term_using_iteration(N);
@@ -115,23 +116,35 @@ int main()
     // Print the data size of an int type variable to the file output stream.
     file << "\n\nsizeof(int) = " << sizeof(int) << " byte(s).";
 
-    // Print the data size of a long int type variable to the command line terminal.
-    std::cout << "\n\nsizeof(long int) = " << sizeof(long int) << " byte(s).";
+    // Print the data size of an unsigned int type variable to the command line terminal.
+    std::cout << "\n\nsizeof(unsigned int) = " << sizeof(unsigned int) << " byte(s).";
 
-    // Print the data size of a long long int type variable to the file output stream.
-    file << "\n\nsizeof(long int) = " << sizeof(long int) << " byte(s).";
+    // Print the data size of an unsigned int type variable to the file output stream.
+    file << "\n\nsizeof(unsigned int) = " << sizeof(unsigned int) << " byte(s).";
 
-    // Print the data size of a long int type variable to the command line terminal.
-    std::cout << "\n\nsizeof(long long int) = " << sizeof(long int) << " byte(s).";
+    // Print the data size of a long type variable to the command line terminal.
+    std::cout << "\n\nsizeof(long) = " << sizeof(long) << " byte(s).";
 
-    // Print the data size of a long long int type variable to the file output stream.
-    file << "\n\nsizeof(long long int) = " << sizeof(long int) << " byte(s).";
+    // Print the data size of a long type variable to the file output stream.
+    file << "\n\nsizeof(long) = " << sizeof(long) << " byte(s).";
 
-    // Print the data size of an unsigned long long int type variable to the command line terminal.
-    std::cout << "\n\nsizeof(unsigned long long int) = " << sizeof(unsigned long long int) << " byte(s).";
+    // Print the data size of an unsigned long type variable to the command line terminal.
+    std::cout << "\n\nsizeof(unsigned long) = " << sizeof(unsigned long) << " byte(s).";
 
-    // Print the data size of an unsigned long long int type variable to the file output stream.
-    file << "\n\nsizeof(unsigned long long int) = " << sizeof(unsigned long long int) << " byte(s).";
+    // Print the data size of an unsigned long type variable to the file output stream.
+    file << "\n\nsizeof(unsigned long) = " << sizeof(unsigned long) << " byte(s).";
+
+    // Print the data size of a long long type variable to the command line terminal.
+    std::cout << "\n\nsizeof(long long) = " << sizeof(long long) << " byte(s).";
+
+    // Print the data size of a long long type variable to the file output stream.
+    file << "\n\nsizeof(long long) = " << sizeof(long long) << " byte(s).";
+
+    // Print the data size of an unsigned long long  type variable to the command line terminal.
+    std::cout << "\n\nsizeof(unsigned long long) = " << sizeof(unsigned long long) << " byte(s).";
+
+    // Print the data size of an unsigned long long type variable to the file output stream.
+    file << "\n\nsizeof(unsigned long long) = " << sizeof(unsigned long long) << " byte(s).";
 
     // Print the data size of a bool type variable to the command line terminal.
     std::cout << "\n\nsizeof(bool) = " << sizeof(bool) << " byte(s).";
