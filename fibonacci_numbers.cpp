@@ -157,6 +157,9 @@ int main()
     // Print a warning message to the command line terminal.
     std::cout << "\n\nWARNING: the recursive function execution time increases exponentially as the value of N increases.";
 
+    // Print a warning message to the file output stream.
+    file << "\n\nWARNING: the recursive function execution time increases exponentially as the value of N increases.";
+
     // Print "Enter a nonnegative integer which is no larger than {MAXIMUM_N}: " to the command line terminal.
     std::cout << "\n\nEnter a nonnegative integer which is no larger than " << MAXIMUM_N << ": ";
 
