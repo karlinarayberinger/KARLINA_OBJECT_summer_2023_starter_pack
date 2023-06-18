@@ -9,7 +9,7 @@
 /* preprocessing directives */
 #include <iostream> // standard input (std::cin), standard output (std::cout)
 #include <fstream> // file input, file output
-#define MAXIMUM_X 100 // constant which represents maximum absolute value of the program input value
+#define MAXIMUM_X 1000 // constant which represents maximum absolute value of the program input value
 #define E 0.00000001 // constant which represents the degree of accuracy of the square root approximation 
 
 /* function prototypes */
