@@ -14,7 +14,7 @@
 
 /* function prototypes */
 float absolute_value(float x);
-long double compute_square_root_of_nonnegative_integer(float N, std::ostream & output);
+long double compute_square_root_of_nonnegative_integer(float x, std::ostream & output);
 
 /**
  * Return the absolute value of a real number input, x.
