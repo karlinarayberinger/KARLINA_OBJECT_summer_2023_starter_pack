@@ -47,8 +47,8 @@
  */
 
 /* preprocessing directives */
-#include  // standard input (std::cin), standard output (std::cout)
-#include  // file input, file output
+#include &lt; iostream &gt; // standard input (std::cin), standard output (std::cout)
+#include &lt; fstream &gt; // file input, file output
 #define MAXIMUM_X 100 // constant which represents maximum absolute value of the program input value
 #define EPSILON 0.00000001 // constant which represents the degree of accuracy of the square root approximation 
 
@@ -123,7 +123,7 @@ int main()
         // Print &quot;Enter a real number (represented using only base-ten digits with an optional radix and with an optional negative sign), x, which is no larger than {MAXIMUM_X}: &quot; to the command line terminal.
         std::cout &lt;&lt; &quot;\n\nEnter a real number (represented using only base-ten digits with an optional radix and with an optional negative sign), x, which is no larger than &quot; &lt;&lt; MAXIMUM_X &lt;&gt; x;
 
-        // Print "The value which was entered for x is {x}." to the command line terminal.
+        // Print &quot;The value which was entered for x is {x}.&quot; to the command line terminal.
         std::cout &lt;&lt; &quot;\nThe value which was entered for x is &quot; &lt;&lt; x &lt;&lt; &quot;.&quot;;
 
         // Print &quot;The value which was entered for x is {x}.&quot; to the file output stream.
@@ -188,8 +188,7 @@ int main()
 
     // Exit the program.
     return 0;
-}
-</pre>
+}</pre>
 <hr>
 <p><strong>SAMPLE_PROGRAM_OUTPUT</strong></p>
 <hr>
