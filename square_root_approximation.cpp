@@ -67,6 +67,9 @@ int main()
     // Declare a double type variable and set its initial value to zero.
     long double A = 0.0;
 
+    // Declare a variable for storing the program user's answer of whether or not to continue inputting values.
+    int input_additional_values = 1;
+
     // Declare a file output stream object.
     std::ofstream file;
 
@@ -95,61 +98,75 @@ int main()
     file << "\nStart Of Program";
     file << "\n--------------------------------";
 
-    // Print "Enter a real number (represented using only base-ten digits and no more than one radix), x, which is no larger than {MAXIMUM_X}: " to the command line terminal.
-    std::cout << "\n\nEnter a real number (represented using only base-ten digits and no more than one radix), x, which is no larger than " << MAXIMUM_X << ": ";
+    // Prompt the user to enter an x value as many times as the user chooses to.
+    while (input_additional_values != 0)
+    {
+        // Print "Enter a real number (represented using only base-ten digits and no more than one radix), x, which is no larger than {MAXIMUM_X}: " to the command line terminal.
+        std::cout << "\n\nEnter a real number (represented using only base-ten digits and no more than one radix), x, which is no larger than " << MAXIMUM_X << ": ";
 
-    // Scan the command line terminal for the most recent keyboard input value.
-    std::cin >> x;
+        // Scan the command line terminal for the most recent keyboard input value.
+        std::cin >> x;
 
-    // Print "The value which was entered for x is {x}." to the command line terminal.
-    std::cout << "\nThe value which was entered for x is " << x << ".";
+        // Print "The value which was entered for x is {x}." to the command line terminal.
+        std::cout << "\nThe value which was entered for x is " << x << ".";
 
-    // Print "The value which was entered for x is {x}." to the file output stream.
-    file << "\n\nThe value which was entered for x is " << x << ".";
+        // Print "The value which was entered for x is {x}." to the file output stream.
+        file << "\n\nThe value which was entered for x is " << x << ".";
 
-    // Print a horizontal line to the command line terminal.
-    std::cout << "\n\n--------------------------------";
+        // Print a horizontal line to the command line terminal.
+        std::cout << "\n\n--------------------------------";
 
-    // Print a horizontal line to the command line terminal.
-    file << "\n\n--------------------------------";
+        // Print a horizontal line to the command line terminal.
+        file << "\n\n--------------------------------";
 
-    // Print "Computing the approximate square root of x:" to the command line terminal.
-    std::cout << "\n\nComputing the approximate square root of x:";
+        // Print "Computing the approximate square root of x:" to the command line terminal.
+        std::cout << "\n\nComputing the approximate square root of x:";
 
-    // Print "Computing the approximate square root of x:" to the file output stream.
-    file << "\n\nComputing the approximate square root of x:";
+        // Print "Computing the approximate square root of x:" to the file output stream.
+        file << "\n\nComputing the approximate square root of x:";
 
-    // Compute the approximate square root of x using Heron's Method, print the computational steps to the command line terminal, and store the function result in A.
-    A = compute_square_root_of_nonnegative_integer(x, std::cout);
+        // Compute the approximate square root of x using Heron's Method, print the computational steps to the command line terminal, and store the function result in A.
+        A = compute_square_root_of_nonnegative_integer(x, std::cout);
 
-    // Compute the approximate square root of x using Heron's Method and print the computational steps to the file output stream.
-    compute_square_root_of_nonnegative_integer(x, file);
+        // Compute the approximate square root of x using Heron's Method and print the computational steps to the file output stream.
+        compute_square_root_of_nonnegative_integer(x, file);
 
-    // Print a horizontal line to the command line terminal.
-    std::cout << "\n\n--------------------------------";
+        // Print a horizontal line to the command line terminal.
+        std::cout << "\n\n--------------------------------";
 
-    // Print a horizontal line to the command line terminal.
-    file << "\n\n--------------------------------";
+        // Print a horizontal line to the command line terminal.
+        file << "\n\n--------------------------------";
 
-    // Print "A = approximate_square_root({x}) = {A}." to the command line terminal.
-    std::cout << "\n\nA = approximate_square_root(" << x << ") = " << A << ".";
+        // Print "A = approximate_square_root({x}) = {A}." to the command line terminal.
+        std::cout << "\n\nA = approximate_square_root(" << x << ") = " << A << ".";
 
-    // Print "A = approximate_square_root({x}) = {A}." to the file output stream.
-    file << "\n\nA = approximate_square_root(" << x << ") = " << A << ".";
+        // Print "A = approximate_square_root({x}) = {A}." to the file output stream.
+        file << "\n\nA = approximate_square_root(" << x << ") = " << A << ".";
 
-    // Print "(A * A) = " << {(A * A)} << ". // the approximate value of x" to the command line terminal.
-    std::cout << "\n\n(A * A) = " << (A * A) << ". // the approximate value of x";
+        // Print "(A * A) = " << {(A * A)} << ". // the approximate value of x" to the command line terminal.
+        std::cout << "\n\n(A * A) = " << (A * A) << ". // the approximate value of x";
 
-    // Print "(A * A) = " << {(A * A)} << ". // the approximate value of x" to the file output stream.
-    file << "\n\n(A * A) = " << (A * A) << ". // the approximate value of x";
+        // Print "(A * A) = " << {(A * A)} << ". // the approximate value of x" to the file output stream.
+        file << "\n\n(A * A) = " << (A * A) << ". // the approximate value of x";
+
+        // Ask the user whether or not to continue inputing values.
+        std::cout << "\n\nWould you like to continue inputing program values? (Enter 1 if YES. Enter 0 if NO): ";
+
+        // Scan the command line terminal for the most recent user input entered via keyboard to store in the variable named input_additional_values.
+        std::cin >> input_additional_values;
+
+        // Print a horizontal line to the command line terminal.
+        std::cout << "\n\n--------------------------------";
+
+        // Print a horizontal line to the command line terminal.
+        file << "\n\n--------------------------------";
+    }
 
     // Print a closing message to the command line terminal.
-    std::cout << "\n\n--------------------------------";
     std::cout << "\nEnd Of Program";
     std::cout << "\n--------------------------------\n\n";
 
     // Print a closing message to the file output stream.
-    file << "\n\n--------------------------------";
     file << "\nEnd Of Program";
     file << "\n--------------------------------";
 
