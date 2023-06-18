@@ -1,7 +1,7 @@
 /**
  * file: square_root_approximation.cpp
  * type: C++ (source file)
- * date: 17_JUNE_2023
+ * date: 18_JUNE_2023
  * author: karbytes
  * license: PUBLIC_DOMAIN
  */
@@ -10,7 +10,7 @@
 #include <iostream> // standard input (std::cin), standard output (std::cout)
 #include <fstream> // file input, file output
 #define MAXIMUM_X 100 // constant which represents maximum absolute value of the program input value
-#define EPSILON 0.00000001 // constant which represents the degree of accuracy of the square root approximation 
+#define E 0.00000001 // constant which represents the degree of accuracy of the square root approximation 
 
 /* function prototypes */
 float absolute_value(float x);
@@ -45,7 +45,7 @@ long double compute_square_root_of_nonnegative_integer(float x, std::ostream & o
     output << "\n\nx = " << x << ". // real number to take the square root of";
     output << "\nS = " << S << ". // variable for storing the approximate square root of x";
     output << "\nY = " << Y << ". // number to add to S before dividing S by 2 for each while loop iteration, i";
-    while (S - Y > EPSILON) 
+    while (S - Y > E) 
     {
         S = (S + Y) / 2;
         Y = absolute_value_of_original_x / S;
