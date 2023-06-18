@@ -13,8 +13,18 @@
 #define E 0.00000001 // constant which represents the degree of accuracy of the square root approximation 
 
 /* function prototypes */
+float absolute_value(float x);
 long double difference(long double n, long double b);
 long double compute_cube_root_of_real_number(float x, std::ostream & output);
+
+/**
+ * Return the absolute value of a real number input, x.
+ */
+float absolute_value(float x)
+{
+    if (x < 0) return -1 * x;
+    return x;
+}
 
 /**
  * Return the absolute value of (n - (b *  b * b)).
@@ -37,8 +47,11 @@ long double difference(long double n, long double b)
 long double compute_cube_root_of_real_number(float x, std::ostream & output)
 {
     int i = 0;
+    float original_x = x, absolute_value_of_original_x = 0.0;
     long double A = 0.0, B = 0.0, C = 0.0, epsilon = 0.0;
-    C = ((x < (-1 * MAXIMUM_X)) || (x > MAXIMUM_X)) ? 0 : x; // If x is out of range, then set x to 0.
+    x = absolute_value(x);
+    absolute_value_of_original_x = x;
+    C = (x > MAXIMUM_X) ? 0 : x; // If x is out of range, then set x to 0.
     output << "\n\nC = " << C << ". // real number to take the cube root of";
     output << "\nB = " << B << ". // variable for storing the approximate cube root of x";
     output << "\nA = " << A << ". // number to add to C before dividing the sum of A and C by 2 for each while loop iteration, i";
@@ -52,7 +65,11 @@ long double compute_cube_root_of_real_number(float x, std::ostream & output)
         epsilon = difference(x, B);
         output << "\nB := (A + C) / 2 = " << B << ".";
         output << "\nepsilon = difference(x , B) = " << epsilon << ".";
-        if (epsilon <= E) return B;
+        if (epsilon <= E) 
+        {
+            if (original_x < 0) return -1 * B;
+            return B;
+        }
         if ((B * B * B) > x) C = B;
         else A = B;
         i += 1;
