@@ -50,7 +50,8 @@ long double compute_cube_root_of_real_number(float x, std::ostream & output)
     float original_x = x;
     long double A = 0.0, B = 0.0, C = 0.0, epsilon = 0.0;
     x = absolute_value(x);
-    C = (x > MAXIMUM_X) ? 0 : x; // If x is out of range, then set x to 0.
+    x = ((x > MAXIMUM_X) || (x < 1)) ? 0 : x; // If x is out of range, then set x to 0. Also, to avoid an infinite loop as a result of the absolute value of x being too small, set x to 0 if the absolute value of x is smaller than 1.
+    C = x;
     output << "\n\nC = " << C << ". // real number to take the cube root of";
     output << "\nB = " << B << ". // variable for storing the approximate cube root of x";
     output << "\nA = " << A << ". // number to add to C before dividing the sum of A and C by 2 for each while loop iteration, i";
