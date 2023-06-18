@@ -41,7 +41,8 @@ long double compute_square_root_of_real_number(float x, std::ostream & output)
     long double S = 0.0, Y = 1.0;
     x = absolute_value(x);
     absolute_value_of_original_x = x;
-    S = (x > MAXIMUM_X) ? 0 : x; // If x is out of range, then set x to 0.
+    x = (x > MAXIMUM_X) ? 0 : x; // If x is out of range, then set x to 0.
+    S = x;
     output << "\n\nx = " << x << ". // real number to take the square root of";
     output << "\nS = " << S << ". // variable for storing the approximate square root of x";
     output << "\nY = " << Y << ". // number to add to S before dividing S by 2 for each while loop iteration, i";
