@@ -47,10 +47,9 @@ long double difference(long double n, long double b)
 long double compute_cube_root_of_real_number(float x, std::ostream & output)
 {
     int i = 0;
-    float original_x = x, absolute_value_of_original_x = 0.0;
+    float original_x = x;
     long double A = 0.0, B = 0.0, C = 0.0, epsilon = 0.0;
     x = absolute_value(x);
-    absolute_value_of_original_x = x;
     C = (x > MAXIMUM_X) ? 0 : x; // If x is out of range, then set x to 0.
     output << "\n\nC = " << C << ". // real number to take the cube root of";
     output << "\nB = " << B << ". // variable for storing the approximate cube root of x";
