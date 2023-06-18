@@ -101,8 +101,8 @@ int main()
     // Prompt the user to enter an x value as many times as the user chooses to.
     while (input_additional_values != 0)
     {
-        // Print "Enter a real number (represented using only base-ten digits and no more than one radix), x, which is no larger than {MAXIMUM_X}: " to the command line terminal.
-        std::cout << "\n\nEnter a real number (represented using only base-ten digits and no more than one radix), x, which is no larger than " << MAXIMUM_X << ": ";
+        // Print "Enter a real number (represented using only base-ten digits with an optional radix and with an optional negative sign), x, which is no larger than {MAXIMUM_X}: " to the command line terminal.
+        std::cout << "\n\nEnter a real number (represented using only base-ten digits with an optional radix and with an optional negative sign), x, which is no larger than " << MAXIMUM_X << ": ";
 
         // Scan the command line terminal for the most recent keyboard input value.
         std::cin >> x;
