@@ -14,7 +14,7 @@
 
 /* function prototypes */
 long double difference(long double n, long double b);
-long double compute_cube_root_of_nonnegative_integer(float x, std::ostream & output);
+long double compute_cube_root_of_real_number(float x, std::ostream & output);
 
 /**
  * Return the absolute value of (n - (b *  b * b)).
@@ -34,14 +34,14 @@ long double difference(long double n, long double b)
  * 
  * This function returns a value whose data type is long double (which is a floating-point number).
  */
-long double compute_cube_root_of_nonnegative_integer(float x, std::ostream & output)
+long double compute_cube_root_of_real_number(float x, std::ostream & output)
 {
     int i = 0;
     long double A = 0.0, B = 0.0, C = 0.0, epsilon = 0.0;
     C = ((x < (-1 * MAXIMUM_X)) || (x > MAXIMUM_X)) ? 0 : x; // If x is out of range, then set x to 0.
     output << "\n\nC = " << C << ". // real number to take the cube root of";
     output << "\nB = " << B << ". // variable for storing the approximate cube root of x";
-    output << "\nA = " << Y << ". // number to add to C before dividing the sum of A and C by 2 for each while loop iteration, i";
+    output << "\nA = " << A << ". // number to add to C before dividing the sum of A and C by 2 for each while loop iteration, i";
     output << "\nepsilon = " << epsilon << ". // variable for storing the difference between the input value and B raised to the power of 3.";
     while (true)
     {
