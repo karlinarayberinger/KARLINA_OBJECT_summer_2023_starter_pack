@@ -144,10 +144,10 @@ int main()
         file << "\n\nA = approximate_square_root(" << x << ") = " << A << ".";
 
         // Print "(A * A) = " << {(A * A)} << ". // the approximate value of x" to the command line terminal.
-        std::cout << "\n\n(A * A) = " << (A * A) << ". // the approximate value of x";
+        std::cout << "\n\n(A * A) = " << (A * A) << ". // the approximate absolute value of x";
 
         // Print "(A * A) = " << {(A * A)} << ". // the approximate value of x" to the file output stream.
-        file << "\n\n(A * A) = " << (A * A) << ". // the approximate value of x";
+        file << "\n\n(A * A) = " << (A * A) << ". // the approximate absolute value of x";
 
         // Ask the user whether or not to continue inputing values.
         std::cout << "\n\nWould you like to continue inputing program values? (Enter 1 if YES. Enter 0 if NO): ";
