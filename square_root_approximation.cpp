@@ -43,7 +43,7 @@ long double compute_square_root_of_nonnegative_integer(float x, std::ostream & o
     absolute_value_of_original_x = x;
     S = (x > MAXIMUM_X) ? 0 : x; // If x is out of range, then set x to 0.
     output << "\n\nx = " << x << ". // real number to take the square root of";
-    output << "\nS = " << S << ". // variable to for storing the approximate square root of x";
+    output << "\nS = " << S << ". // variable for storing the approximate square root of x";
     output << "\nY = " << Y << ". // number to add to S before dividing S by 2 for each while loop iteration, i";
     while (S - Y > EPSILON) 
     {
