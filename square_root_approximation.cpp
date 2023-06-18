@@ -14,7 +14,7 @@
 
 /* function prototypes */
 float absolute_value(float x);
-long double compute_square_root_of_nonnegative_integer(float x, std::ostream & output);
+long double compute_square_root_of_real_number(float x, std::ostream & output);
 
 /**
  * Return the absolute value of a real number input, x.
@@ -34,7 +34,7 @@ float absolute_value(float x)
  * 
  * This function returns a value whose data type is long double (which is a floating-point number).
  */
-long double compute_square_root_of_nonnegative_integer(float x, std::ostream & output)
+long double compute_square_root_of_real_number(float x, std::ostream & output)
 {
     int i = 0;
     float original_x = x, absolute_value_of_original_x = 0.0;
@@ -126,10 +126,10 @@ int main()
         file << "\n\nComputing the approximate square root of x:";
 
         // Compute the approximate square root of x using Heron's Method, print the computational steps to the command line terminal, and store the function result in A.
-        A = compute_square_root_of_nonnegative_integer(x, std::cout);
+        A = compute_square_root_of_real_number(x, std::cout);
 
         // Compute the approximate square root of x using Heron's Method and print the computational steps to the file output stream.
-        compute_square_root_of_nonnegative_integer(x, file);
+        compute_square_root_of_real_number(x, file);
 
         // Print a horizontal line to the command line terminal.
         std::cout << "\n\n--------------------------------";
