@@ -41,7 +41,7 @@
 /**
  * file: square_root_approximation.cpp
  * type: C++ (source file)
- * date: 17_JUNE_2023
+ * date: 18_JUNE_2023
  * author: karbytes
  * license: PUBLIC_DOMAIN
  */
@@ -50,7 +50,7 @@
 #include &lt; iostream &gt; // standard input (std::cin), standard output (std::cout)
 #include &lt; fstream &gt; // file input, file output
 #define MAXIMUM_X 100 // constant which represents maximum absolute value of the program input value
-#define EPSILON 0.00000001 // constant which represents the degree of accuracy of the square root approximation 
+#define E 0.00000001 // constant which represents the degree of accuracy of the square root approximation 
 
 /* function prototypes */
 float absolute_value(float x);
@@ -64,7 +64,7 @@ float absolute_value(float x)
     if (x  MAXIMUM_X) ? 0 : x; // If x is out of range, then set x to 0.
     output &lt;&lt; &quot;\n\nx = &quot; &lt;&lt; x &lt;&lt; &quot;. // real number to take the square root of&quot;;
     output &lt;&lt; &quot;\nS = &quot; &lt;&lt; S &lt;&lt; &quot;. // variable for storing the approximate square root of x&quot;;
-    output &lt;&lt; &quot;\nY = &quot; &lt;&lt; Y &lt; EPSILON) 
+    output &lt;&lt; &quot;\nY = &quot; &lt;&lt; Y &lt; E) 
     {
         S = (S + Y) / 2;
         Y = absolute_value_of_original_x / S;
@@ -549,5 +549,5 @@ End Of Program
 --------------------------------
 </pre>
 <hr>
-<p>This web page was last updated on 17_JUNE_2023. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<p>This web page was last updated on 18_JUNE_2023. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
 <hr>
