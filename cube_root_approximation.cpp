@@ -42,7 +42,7 @@ long double compute_cube_root_of_real_number(float x, std::ostream & output)
     output << "\n\nC = " << C << ". // real number to take the cube root of";
     output << "\nB = " << B << ". // variable for storing the approximate cube root of x";
     output << "\nA = " << A << ". // number to add to C before dividing the sum of A and C by 2 for each while loop iteration, i";
-    output << "\nepsilon = " << epsilon << ". // variable for storing the difference between the input value and B raised to the power of 3.";
+    output << "\nepsilon = " << epsilon << ". // variable for storing the difference between the input value and B raised to the power of 3";
     while (true)
     {
         output << "\n\ni := " << i << ".";
