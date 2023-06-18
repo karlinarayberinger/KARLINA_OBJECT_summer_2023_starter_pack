@@ -37,9 +37,10 @@ float absolute_value(float x)
 long double compute_square_root_of_nonnegative_integer(float x, std::ostream & output)
 {
     int i = 0;
-    float original_x = x;
+    float original_x = x, absolute_value_of_original_x = 0.0;
     long double S = 0.0, Y = 1.0;
     x = absolute_value(x);
+    absolute_value_of_original_x = x;
     S = (x > MAXIMUM_X) ? 0 : x; // If x is out of range, then set x to 0.
     output << "\n\nx = " << x << ". // real number to take the square root of";
     output << "\nS = " << S << ". // variable to for storing the approximate square root of x";
@@ -47,10 +48,10 @@ long double compute_square_root_of_nonnegative_integer(float x, std::ostream & o
     while (S - Y > EPSILON) 
     {
         S = (S + Y) / 2;
-        Y = N / S;
+        Y = absolute_value_of_original_x / S;
         output << "\n\ni := " << i << ".";
         output << "\nS := ((S + Y) / 2) = " << S << ".";
-        output << "\nY := (N / S) = " << Y << ".";
+        output << "\nY := (absolute_value_of_original_x / S) = " << Y << ".";
         i += 1;
     }
     if (original_x < 0) return -1 * S;
@@ -121,8 +122,8 @@ int main()
     // Compute the approximate square root of x using Heron's Method, print the computational steps to the command line terminal, and store the function result in A.
     A = compute_square_root_of_nonnegative_integer(x, std::cout);
 
-    // Compute the approximate square root of N using Heron's Method and print the computational steps to the file output stream.
-    compute_square_root_of_nonnegative_integer(N, file);
+    // Compute the approximate square root of x using Heron's Method and print the computational steps to the file output stream.
+    compute_square_root_of_nonnegative_integer(x, file);
 
     // Print a horizontal line to the command line terminal.
     std::cout << "\n\n--------------------------------";
