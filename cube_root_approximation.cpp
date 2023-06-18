@@ -49,9 +49,9 @@ long double compute_cube_root_of_real_number(float x, std::ostream & output)
         output << "\nC := " << C << ".";
         output << "\nA := " << A << ".";
         B = (A + C) / 2;
-        epsilon = difference(C, B);
+        epsilon = difference(x, B);
         output << "\nB := (A + C) / 2 = " << B << ".";
-        output << "\nepsilon = difference(C , B) = " << epsilon << ".";
+        output << "\nepsilon = difference(x , B) = " << epsilon << ".";
         if (epsilon <= E) return B;
         if ((B * B * B) > x) C = B;
         else A = B;
