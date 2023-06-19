@@ -1,7 +1,7 @@
 /**
  * file: square_root_approximation.cpp
  * type: C++ (source file)
- * date: 18_JUNE_2023
+ * date: 19_JUNE_2023
  * author: karbytes
  * license: PUBLIC_DOMAIN
  */
@@ -26,7 +26,7 @@ float absolute_value(float x)
 }
 
 /**
- * Compute the approximate square root of a real number, x, using Newton's Method.
+ * Compute the approximate square root of a real number, x, using an iterative method.
  * 
  * The square root of x is x raised to the power of 0.5 (i.e. x ^ (1/2)).
  * 
