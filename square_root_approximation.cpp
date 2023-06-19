@@ -26,7 +26,7 @@ float absolute_value(float x)
 }
 
 /**
- * Compute the approximate square root of a real number, x, using Heron's Method.
+ * Compute the approximate square root of a real number, x, using Newton's Method.
  * 
  * The square root of x is x raised to the power of 0.5 (i.e. x ^ (1/2)).
  * 
