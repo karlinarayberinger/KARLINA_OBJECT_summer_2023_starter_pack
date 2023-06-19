@@ -1,7 +1,7 @@
 /**
  * file: cube_root_approximation.cpp
  * type: C++ (source file)
- * date: 18_JUNE_2023
+ * date: 19_JUNE_2023
  * author: karbytes
  * license: PUBLIC_DOMAIN
  */
@@ -36,7 +36,7 @@ long double difference(long double n, long double b)
 }
 
 /**
- * Compute the approximate cube root of a real number, x, using the Bisection Method.
+ * Compute the approximate cube root of a real number, x, using an iterative method.
  * 
  * The cube root of x is x raised to the power of (1/3).
  * 
