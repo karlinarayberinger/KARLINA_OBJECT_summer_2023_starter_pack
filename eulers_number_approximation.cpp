@@ -142,8 +142,8 @@ long double approximate_eulers_number(int N, std::ostream & output)
 		output << "\n&T[" << i << "] = " << &T[i] << ". // memory address of T[" << i << "]";
 	}
 
-	// Print "Storing the the factorial of each nonnegative integer which is smaller than N in array T..." to the output stream.
-	output << "\n\nStoring the the factorial of each nonnegative integer which is smaller than N in array T...\n";
+	// Print "Storing the factorial of each nonnegative integer which is smaller than N in array T..." to the output stream.
+	output << "\n\nStoring the factorial of each nonnegative integer which is smaller than N in array T...\n";
 
 	// For each integer value represented by i (starting with 0 and ending with (N - 1) in ascending order):
 	// set the value of the ith element of array T to i! and
@@ -160,8 +160,8 @@ long double approximate_eulers_number(int N, std::ostream & output)
 		output << T[i] << ".";
 	}
 
-	// Print "Storing the first N approximations of Euler's Number in descending order in array T..." to the output stream.
-	output << "\n\nStoring the first N approximations of Euler's Number in array T...\n";
+	// Print "Computing the appoximate value of Euler's Number by adding up the reciprocal of each value in array T..." to the output stream.
+	output << "\n\nComputing the appoximate value of Euler's Number by adding up the reciprocal of each value in array T...\n";
 
 	// For each integer value represented by i (starting with 0 and ending with (N - 1) in ascending order):
 	// print the value of (1 / T[i]) to the output stream.
