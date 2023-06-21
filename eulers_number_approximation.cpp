@@ -142,9 +142,6 @@ long double approximate_eulers_number(int N, std::ostream & output)
 		output << "\n&T[" << i << "] = " << &T[i] << ". // memory address of T[" << i << "]";
 	}
 
-	// Print "Storing the first N nonnegative integers in array T..." to the output stream.
-	output << "\n\nStoring the first N nonnegative integers in array T...\n";
-
 	// Print "Storing the the factorial of each nonnegative integer which is smaller than N in array T..." to the output stream.
 	output << "\n\nStoring the the factorial of each nonnegative integer which is smaller than N in array T...\n";
 
