@@ -85,8 +85,8 @@ unsigned long long compute_factorial_of_N(int N)
 long double approximate_eulers_number(int N, std::ostream & output)
 {
 	// Declare a long double type variable (i.e. a variable for storing floating-point number values) named A. 
-	// Set the initial value which is stored in A to one.
-	long double A = 1.0;
+	// Set the initial value which is stored in A to zero.
+	long double A = 0.0;
 
 	// Declare an int type variable (i.e. a variable for storing integer values) named i. 
 	// Set the intiial value which is stored in i to zero.
