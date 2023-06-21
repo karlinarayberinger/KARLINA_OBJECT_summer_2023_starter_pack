@@ -157,7 +157,7 @@ long double approximate_eulers_number(int N, std::ostream & output)
 		output << "\nT[" << i << "] := factorial(" << i << ") = (" << i << ")! = ";
 
 		// Store i! in T[i].
-		T[i] = compute_factorial_of_N_using_iteration(i);
+		T[i] = compute_factorial_of_N(i);
 
 		// Print "{T[i]}." to the output stream.
 		output << T[i] << ".";
