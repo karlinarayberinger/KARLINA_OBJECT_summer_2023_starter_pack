@@ -16,6 +16,7 @@
 /* function prototypes */
 bool is_whole_number(double x);
 double absolute_value(double x);
+float ln(float x);
 double power(double base, double exponent);
 
 /* program entry point */
@@ -281,6 +282,39 @@ double absolute_value(double x)
     return x;
 }
 
+
+//--------------------------------------------------------------------------------
+// The following function and associated comments were not written by karbytes. 
+//--------------------------------------------------------------------------------
+
+// ln.c
+//
+// simple, fast, accurate natural log approximation
+// when without <math.h>
+
+// featuring * floating point bit level hacking,
+//           * x=m*2^p => ln(x)=ln(m)+ln(2)p,
+//           * Remez algorithm
+
+// by Lingdong Huang, 2020. Public domain.
+
+// ============================================
+
+float ln(float x) {
+  unsigned int bx = * (unsigned int *) (&x);
+  unsigned int ex = bx >> 23;
+  signed int t = (signed int)ex-(signed int)127;
+  unsigned int s = (t < 0) ? (-t) : t;
+  bx = 1065353216 | (bx & 8388607);
+  x = * (float *) (&bx);
+  return -1.49278+(2.11263+(-0.729104+0.10969*x)*x)*x+0.6931471806*t;
+}
+// done.
+
+//--------------------------------------------------------------------------------
+// End of code which was not written by karbytes. 
+//--------------------------------------------------------------------------------
+
 /**
  * Reverse engineer the cmath pow() function 
  * using the following properties of natural logarithms:
@@ -348,6 +382,6 @@ double power(double base, double exponent)
             return 1 / output;
         }
     }
-    if (exponent > 0) return exp(log(base) * exponent); // Return e ^ (ln(base) * exponent). 
-    return exp(exp(log(base) * absolute_value(exponent))); // Return e ^ (e ^ (ln(base) * absolute_value(exponent))).
+    if (exponent > 0) return exp(ln(base) * exponent); // Return e ^ (ln(base) * exponent). 
+    return exp(exp(ln(base) * absolute_value(exponent))); // Return e ^ (e ^ (ln(base) * absolute_value(exponent))).
 }
