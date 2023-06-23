@@ -1,5 +1,0 @@
-Agency is a property exclusively of information processing agents. Not all objects are information processing agents. Therefore, not every object in nature has agency. 
-
-Not all objects have the same degree of agency. For example, a virus exhibits less agency than does a human nervous system because the former has fewer decision making options per decision than the latter due to hardware limitations which limit the complexity of information which that hardware can store and manipulate. 
-
-In general, the agency of some information processing agent can be measured in terms of decision making complexity (which includes quantifiable factors such as data throughput capacity (i.e. bits per second), modeled decision making outcomes (number of options for at a given point in an information processing agent's runtime), amount of accumulated non redundant knowledge which that information processing agent learned from past decision making experiences (bits of data stored), and efficiency of knowledge retrieval processes (algorithm efficiency classifications)).
