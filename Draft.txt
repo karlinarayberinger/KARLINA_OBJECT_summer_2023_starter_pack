@@ -1,5 +1,0 @@
-Note that the value returned by the function call pow(-1, 0.5) (and pow() is a function encapsulated by the C++ libraries cmath and math.h) returned the value -nan.
-
-By contrast, the value returned by the function call power(-1, 0.5) (and power() is a function defined in power.cpp)  returned the value 340357746532624088885911455895174250496.
-
-That is because -1 to the power of 0.5 is an imaginary number instead of a real number.
