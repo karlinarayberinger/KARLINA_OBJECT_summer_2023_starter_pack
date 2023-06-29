@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath> /* for pow(), exp(), and ln() */
  
 // chatGPT's stupid function.
 double log(int x)
@@ -45,13 +46,14 @@ double absolute_value(double x)
 // https://stackoverflow.com/questions/70382318/ex-without-math-h
 double powerex(double x) {
     double a = 1.0, e = a;
-    int invert = x<0;
+    int n = 1;
+    int invert = x < 0;
     x = absolute_value(x);
-    for (int n = 1; e != e + a ; ++n) {
+    for (n = 1; e != e + a; n += 1) {
         a = a * x / n;
         e += a;
     }
-    return invert ? 1/e : e;
+    return invert ? (1 / e) : e;
 }
 
 int main()
@@ -70,6 +72,9 @@ int main()
     
     double result = powerex(num);
     std::cout << "e to the power of  " << num << " is " << result << std::endl;
+    std::cout << "exp(num) is " << exp(num) << "." << std::endl;
+
+    std::cout << "pow(-100, 0.5) is " << pow(-100, 0.5) << "." << std::endl;
 
     return 0;
 }
