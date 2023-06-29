@@ -1,7 +1,7 @@
 /**
  * file: power.cpp
  * type: C++ (source file)
- * date: 23_JUNE_2023
+ * date: 29_JUNE_2023
  * author: karbytes
  * license: PUBLIC_DOMAIN
  */
@@ -9,13 +9,14 @@
 /* preprocessing directives */
 #include <iostream> // standard input (std::cin), standard output (std::cout)
 #include <fstream> // file input, file output
-#include <cmath> // exp() and log() functions
-#define MAXIMUM_ABSOLUTE_VALUE_BASE 10 // constant which represents maximum absolute value for base
-#define MAXIMUM_ABSOLUTE_VALUE_EXPONENT 10 // constant which represents maximum absolute value for exponent
+// #include <cmath> // exp() and log() functions
+#define MAXIMUM_ABSOLUTE_VALUE_BASE 100 // constant which represents maximum absolute value for base
+#define MAXIMUM_ABSOLUTE_VALUE_EXPONENT 100 // constant which represents maximum absolute value for exponent
 
 /* function prototypes */
 bool is_whole_number(double x);
 double absolute_value(double x);
+double power_of_e_to_x(double x);
 float ln(float x);
 double power(double base, double exponent);
 
@@ -63,109 +64,13 @@ int main()
     // Print some program-related data to the file output stream.
     file << "\n\npower(base, exponent) = base ^ exponent.";
 
-    // Print a divider line to the command line terminal.
-    std::cout << "\n\n--------------------------------";
-
-    // Print a divider line to the file output stream.
-    file << "\n\n--------------------------------";
-
-    // The following lines of code compare the cmath library pow() function and the power function defined in this program (and prints data to the command line terminal).
-    std::cout << "\n\n0.5 ^ -0.5 = 0.22360679774. // according to chatGPT";
-    std::cout << "\n\n0.5 ^ -0.5 = 1.41421356237. // according to Google";
-    std::cout << "\n\npow(0.5, -0.5) = " << pow(0.5, -0.5) << ".";
-    std::cout << "\n\npower(0.5, -0.5) = " << power(0.5, -0.5) << ".";
-
-    // The following lines of code compare the cmath library pow() function and the power function defined in this program (and prints data to the file output stream).
-    file << "\n\n0.5 ^ -0.5 = 0.22360679774. // according to chatGPT";
-    file << "\n\n0.5 ^ -0.5 = 1.41421356237. // according to Google";
-    file << "\n\npow(0.5, -0.5) = " << pow(0.5, -0.5) << ".";
-    file << "\n\npower(0.5, -0.5) = " << power(0.5, -0.5) << ".";
-
-    // Print a divider line to the command line terminal.
-    std::cout << "\n\n--------------------------------";
-
-    // Print a divider line to the file output stream.
-    file << "\n\n--------------------------------";
-
-    // The following lines of code compare the cmath library pow() function and the power function defined in this program (and prints data to the command line terminal).
-    std::cout << "\n\n0.5 ^ 0.5 = 0.70710678118. // according to chatGPT";
-    std::cout << "\n\n0.5 ^ 0.5 = 0.70710678118. // according to Google";
-    std::cout << "\n\npow(0.5, 0.5) = " << pow(0.5, 0.5) << ".";
-    std::cout << "\n\npower(0.5, 0.5) = " << power(0.5, 0.5) << ".";
-
-    // The following lines of code compare the cmath library pow() function and the power function defined in this program (and prints data to the file output stream).
-    file << "\n\n0.5 ^ 0.5 = 0.70710678118. // according to chatGPT";
-    file << "\n\n0.5 ^ 0.5 = 0.70710678118. // according to Google";
-    file << "\n\npow(0.5, 0.5) = " << pow(0.5, 0.5) << ".";
-    file << "\n\npower(0.5, 0.5) = " << power(0.5, 0.5) << ".";
-
-    // Print a divider line to the command line terminal.
-    std::cout << "\n\n--------------------------------";
-
-    // Print a divider line to the file output stream.
-    file << "\n\n--------------------------------";
-
-    // The following lines of code compare the cmath library pow() function and the power function defined in this program (and prints data to the command line terminal).
-    std::cout << "\n\n-0.25 ^ 0.25 = -0.84370052602. // according to chatGPT"; 
-    std::cout << "\n\n-0.25 ^ 0.25 = -0.70710678118. // according to Google"; 
-    std::cout << "\n\npow(-0.25, 0.25) = " << pow(-0.25, 0.25) << ".";
-    std::cout << "\n\npower(-0.25, 0.25) = " << power(-0.25, 0.25) << ".";
-
-    // The following lines of code compare the cmath library pow() function and the power function defined in this program (and prints data to the file output stream).
-    file << "\n\n-0.25 ^ 0.25 = -0.84370052602. // according to chatGPT"; 
-    file << "\n\n-0.25 ^ 0.25 = -0.70710678118. // according to Google"; 
-    file << "\n\npow(-0.25, 0.25) = " << pow(-0.25, 0.25) << ".";
-    file << "\n\npower(-0.25, 0.25) = " << power(-0.25, 0.25) << ".";
-
-    // Print a divider line to the command line terminal.
-    std::cout << "\n\n--------------------------------";
-
-    // Print a divider line to the file output stream.
-    file << "\n\n--------------------------------";
-
-    // The following lines of code compare the cmath library pow() function and the power function defined in this program (and prints data to the command line terminal).
-    std::cout << "\n\n0.25 ^ 0.25 = 0.81651954631. // according to chatGPT"; 
-    std::cout << "\n\n0.25 ^ 0.25 = 0.70710678118. // according to Google"; 
-    std::cout << "\n\npow(0.25, 0.25) = " << pow(0.25, 0.25) << ".";
-    std::cout << "\n\npower(0.25, 0.25) = " << power(0.25, 0.25) << ".";
-
-    // The following lines of code compare the cmath library pow() function and the power function defined in this program (and prints data to the file output stream).
-    file << "\n\n0.25 ^ 0.25 = 0.81651954631. // according to chatGPT"; 
-    file << "\n\n0.25 ^ 0.25 = 0.70710678118. // according to Google"; 
-    file << "\n\npow(0.25, 0.25) = " << pow(0.25, 0.25) << ".";
-    file << "\n\npower(0.25, 0.25) = " << power(0.25, 0.25) << ".";
-
-    // Print a divider line to the command line terminal.
-    std::cout << "\n\n--------------------------------";
-
-    // Print a divider line to the file output stream.
-    file << "\n\n--------------------------------";
-
-    // The following lines of code compare the cmath library pow() function and the power function defined in this program (and prints data to the command line terminal).
-    std::cout << "\n\n0.5 ^ -1 = 2. // according to chatGPT"; 
-    std::cout << "\n\n0.5 ^ -1 = 2. // according to Google"; 
-    std::cout << "\n\npow(0.5, -1) = " << pow(0.5, -1) << ".";
-    std::cout << "\n\npower(0.5, -1) = " << power(0.5, -1) << ".";
-
-    // The following lines of code compare the cmath library pow() function and the power function defined in this program (and prints data to the file output stream).
-    file << "\n\n0.5 ^ -1 = 2. // according to chatGPT"; 
-    file << "\n\n0.5 ^ -1 = 2. // according to Google"; 
-    file << "\n\npow(0.5, -1) = " << pow(0.5, -1) << ".";
-    file << "\n\npower(0.5, -1) = " << power(0.5, -1) << ".";
-
-    // Print one newline character to the command line terminal.
-    std::cout << "\n\n";
-
-    // Print one newline character to the file output stream
-    file << "\n\n";
-
     while (input_additional_values != 0)
     {
         // Print a divider line to the command line terminal.
-        std::cout << "--------------------------------";
+        std::cout << "\n\n--------------------------------";
 
         // Print a divider line to the file output stream.
-        file << "--------------------------------";
+        file << "\n\n--------------------------------";
 
         // Prompt the user to enter a value to store in the variable named base (to the command line terminal).
         std::cout << "\n\nEnter a real number value for base which is no larger than ";
@@ -239,12 +144,6 @@ int main()
 
         // Scan the command line terminal for the most recent user input entered via keyboard to store in the variable named input_additional_values.
         std::cin >> input_additional_values;
-
-        // Print one newline character to the command line terminal.
-        std::cout << "\n";
-
-        // Print one newline character to the file output stream
-        file << "\n";
     }
 
     // Print a closing message to the command line terminal.
@@ -253,7 +152,7 @@ int main()
     std::cout << "\n--------------------------------\n\n";
 
     // Print a closing message to the file output stream.
-    file << "\n--------------------------------";
+    file << "\n\n--------------------------------";
     file << "\nEND OF PROGRAM";
     file << "\n--------------------------------";
 
@@ -282,15 +181,33 @@ double absolute_value(double x)
     return x;
 }
 
+/**
+ * Return the approximate value of Euler's Number to the power of some real number x.
+ * 
+ * This function is essentially identical to the C++ library math.h function exp().
+ */
+double power_of_e_to_x(double x) {
+    double a = 1.0, e = a;
+    int n = 1;
+    int invert = x < 0;
+    x = absolute_value(x);
+    for (n = 1; e != e + a; n += 1) {
+        a = a * x / n;
+        e += a;
+    }
+    return invert ? (1 / e) : e;
+}
 
-//--------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------
 // The following function and associated comments were not written by karbytes. 
-//--------------------------------------------------------------------------------
+//
+// The followng function is essentially identical to the C++ library math.h function log().
+//-----------------------------------------------------------------------------------------------
 
 // ln.c
 //
 // simple, fast, accurate natural log approximation
-// when without <math.h>
+// when without < math.h >
 
 // featuring * floating point bit level hacking,
 //           * x=m*2^p => ln(x)=ln(m)+ln(2)p,
@@ -311,9 +228,9 @@ float ln(float x) {
 }
 // done.
 
-//--------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------
 // End of code which was not written by karbytes. 
-//--------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------
 
 /**
  * Reverse engineer the cmath pow() function 
@@ -382,6 +299,6 @@ double power(double base, double exponent)
             return 1 / output;
         }
     }
-    if (exponent > 0) return exp(ln(base) * exponent); // Return e ^ (ln(base) * exponent). 
-    return exp(exp(ln(base) * absolute_value(exponent))); // Return e ^ (e ^ (ln(base) * absolute_value(exponent))).
+    if (exponent > 0) return power_of_e_to_x(ln(base) * exponent); // Return e ^ (ln(base) * exponent). 
+    return power_of_e_to_x(power_of_e_to_x(ln(base) * absolute_value(exponent))); // Return e ^ (e ^ (ln(base) * absolute_value(exponent))).
 }
