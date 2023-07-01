@@ -1,6 +1,0 @@
-// This pseudocode models agency as a function of knowledge and knowledge as a function of information (and there is presumably more information than an information processing agent is physically capable of rendering as knowledge using that information processing agent's hardware).
-agency(information) :=
-{
-    agent.knowledge := information * agent.complexity. // agent.complexity is a value no smaller than 0 and smaller than 1.
-    agent.increment_time(agent.knowledge, time_period). // agent perceives itself as having some degree of control over the future at the point in time represented by this point in time plus the number of milliseconds represented by time_period (and time_period is a positive number no larger than agent.MAXIMUM_DECISION_LENGTH).
-}.
