@@ -1,4 +1,4 @@
-// This pseudocode models agency as a function of knowledge and knowledge as a function of information (and there is presumably more information than an information processing agent is physically capable of rendering as knowledge using that information processing agent's hardware.
+// This pseudocode models agency as a function of knowledge and knowledge as a function of information (and there is presumably more information than an information processing agent is physically capable of rendering as knowledge using that information processing agent's hardware).
 agency(information) :=
 {
     agent.knowledge := information * agent.complexity. // agent.complexity is a value no smaller than 0 and smaller than 1.
