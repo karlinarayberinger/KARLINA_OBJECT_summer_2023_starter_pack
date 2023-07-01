@@ -1,1 +1,0 @@
-// (Note that agent.complexity cannot be 1 because, if it is, then the agent would implicitly be able to process all information simultaneously (which means that agent would be its entire encompassing universe). Meanwhile, if agent.complexity is 0, then that agent would presumably be dead or in a cryogenically frozen state (and, hence, lacking agency)).
