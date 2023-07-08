@@ -111,7 +111,7 @@ void HASH_TABLE::print(std::ostream & output)
     output << "\nsizeof(LINKED_LIST) = " << sizeof(LINKED_LIST) << ". // The sizeof() operation returns the number of bytes of memory which a LINKED_LIST type variable occupies. (Each memory cell has a data capacity of 1 byte).";
     output << "\nsizeof(LINKED_LIST *) = " << sizeof(LINKED_LIST *) << ". // The sizeof() operation returns the number of bytes of memory which a pointer-to-LINKED_LIST type variable occupies. (Each memory cell has a data capacity of 1 byte).";
     output << "\nsizeof(HASH_TABLE) = " << sizeof(HASH_TABLE) << ". // The sizeof() operation returns the number of bytes of memory which a HASH_TABLE type variable occupies. (Each memory cell has a data capacity of 1 byte).";
-    output << "\nsizeof(HASH_TABLE) = " << sizeof(HASH_TABLE *) << ". // The sizeof() operation returns the number of bytes of memory which a pointer-to-HASH_TABLE type variable occupies. (Each memory cell has a data capacity of 1 byte).";
+    output << "\nsizeof(HASH_TABLE *) = " << sizeof(HASH_TABLE *) << ". // The sizeof() operation returns the number of bytes of memory which a pointer-to-HASH_TABLE type variable occupies. (Each memory cell has a data capacity of 1 byte).";
     output << "\narray = " << array << ". // array stores either the first memory cell of a contiguous chunk of memory cells which are allocated to a LINKED_LIST type variable or else array stores NULL (and the value NULL is displayed as 0).";
     output << "\nN = " << N << ". // N stores the total number of LINKED_LIST types elements which are represented by the array property of the caller HASH_TABLE object.";
     output << "\nHASH_TABLE := {";
